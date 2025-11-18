@@ -1,0 +1,269 @@
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #0056A4 0%, #003d73 100%);
+  overflow: hidden;
+  padding: 100px 0 50px;
+}
+
+.hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-text {
+  color: white;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #FFD700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  margin-bottom: 2rem;
+}
+
+.btn-primary-hero {
+  display: inline-block;
+  background: #FFD700;
+  color: #0056A4;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+  border: 2px solid #FFD700;
+}
+
+.btn-primary-hero:hover {
+  background: #ffed4a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 1rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 140px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+
+.stat-btn {
+  background: #FFD700;
+  color: #0056A4;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.stat-btn:hover {
+  background: #ffed4a;
+  transform: translateY(-2px);
+}
+
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.batch-years {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.batch-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.batch-card:hover {
+  background: rgba(255, 215, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.alumni-preview {
+  perspective: 1000px;
+}
+
+.preview-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: rotateY(-5deg);
+  transition: transform 0.3s ease;
+  max-width: 300px;
+  text-align: center;
+}
+
+.preview-card:hover {
+  transform: rotateY(0deg) translateY(-10px);
+}
+
+.alumni-image {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 3px solid #0056A4;
+}
+
+.image-placeholder {
+  width: 100px;
+  height: 100px;
+  background: #0056A4;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.alumni-info h3 {
+  color: #0056A4;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.alumni-info p {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.verified-badge {
+  background: #FFD700;
+  color: #0056A4;
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+@media (max-width: 968px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 0 30px;
+    min-height: 70vh;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+
+  .stat {
+    min-width: 100px;
+    padding: 1rem 0.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .batch-card {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .preview-card {
+    padding: 1.5rem;
+    max-width: 250px;
+  }
+}

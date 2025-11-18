@@ -1,0 +1,295 @@
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-trigger {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: inherit;
+}
+
+.user-trigger:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.avatar-placeholder.large {
+  width: 60px;
+  height: 60px;
+  font-size: 18px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.user-role {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+.dropdown-arrow {
+  color: #6c757d;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e2e8f0;
+  z-index: 1000;
+  margin-top: 8px;
+  animation: slideDown 0.2s ease;
+}
+
+.user-dropdown.bottom-left .dropdown-menu {
+  right: auto;
+  left: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.header-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.header-info h4 {
+  margin: 0 0 4px 0;
+  color: #2d3748;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-info p {
+  margin: 0 0 6px 0;
+  color: #6c757d;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-batch {
+  color: #667eea;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: #f0f7ff;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.menu-items {
+  padding: 0.5rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #4a5568;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.menu-item:hover {
+  background: #f7fafc;
+  color: #2d3748;
+}
+
+.menu-item svg {
+  color: #6c757d;
+  flex-shrink: 0;
+}
+
+.menu-item:hover svg {
+  color: #667eea;
+}
+
+.menu-item.logout {
+  color: #e53e3e;
+}
+
+.menu-item.logout:hover {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.menu-item.logout svg {
+  color: #e53e3e;
+}
+
+.menu-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 0.5rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .user-info {
+    display: none;
+  }
+  
+  .dropdown-menu {
+    width: 250px;
+    right: -50px;
+  }
+  
+  .user-dropdown.bottom-left .dropdown-menu {
+    right: auto;
+    left: -50px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .user-name {
+    color: #e2e8f0;
+  }
+  
+  .user-role {
+    color: #a0aec0;
+  }
+  
+  .dropdown-menu {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+  
+  .menu-header {
+    border-color: #4a5568;
+  }
+  
+  .header-info h4 {
+    color: #e2e8f0;
+  }
+  
+  .header-info p {
+    color: #a0aec0;
+  }
+  
+  .user-batch {
+    background: #2a4365;
+  }
+  
+  .menu-item {
+    color: #a0aec0;
+  }
+  
+  .menu-item:hover {
+    background: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  .menu-item:hover svg {
+    color: #667eea;
+  }
+  
+  .menu-divider {
+    background: #4a5568;
+  }
+  
+  .user-trigger:hover {
+    background: rgba(102, 126, 234, 0.2);
+  }
+}

@@ -1,0 +1,155 @@
+.alumni-directory-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0056A4 0%, #003d73 100%);
+  padding-top: 70px; /* Account for fixed header */
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.directory-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.directory-header {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.directory-header h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.directory-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.search-filters-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.search-bar-container {
+  margin-bottom: 1.5rem;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  outline: none;
+  border-color: #0056A4;
+  box-shadow: 0 0 0 3px rgba(0, 86, 164, 0.1);
+}
+
+.clear-filters {
+  background: linear-gradient(135deg, #0056A4 0%, #003d73 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.clear-filters:hover {
+  background: linear-gradient(135deg, #003d73 0%, #002d5a 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 86, 164, 0.3);
+}
+
+.results-info {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.results-info p {
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .alumni-directory-page {
+    padding-top: 65px;
+  }
+  
+  .directory-container {
+    padding: 1rem;
+  }
+  
+  .directory-header {
+    padding: 1.5rem;
+  }
+  
+  .directory-header h1 {
+    font-size: 2rem;
+  }
+  
+  .search-filters-section {
+    padding: 1.5rem;
+  }
+  
+  .filters-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+}

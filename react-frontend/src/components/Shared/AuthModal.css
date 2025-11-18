@@ -1,0 +1,208 @@
+.auth-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.auth-modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.auth-modal-close-btn:hover,
+.modal-close:hover {
+  background: #f1f5f9;
+  color: #0056A4;
+}
+
+.auth-modal-header,
+.modal-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-modal-logo,
+.modal-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0056A4;
+  margin-bottom: 1rem;
+}
+
+.auth-modal-header h2,
+.modal-header h2 {
+  color: #0056A4;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.auth-modal-header p,
+.modal-header p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.auth-modal-actions,
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.auth-modal-btn,
+.modal-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.auth-modal-btn.login-btn,
+.modal-btn.login-btn {
+  background: linear-gradient(135deg, #0056A4 0%, #003d73 100%);
+  color: white;
+}
+
+.auth-modal-btn.login-btn:hover,
+.modal-btn.login-btn:hover {
+  background: linear-gradient(135deg, #003d73 0%, #002d5a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 86, 164, 0.4);
+}
+
+.auth-modal-btn.register-btn,
+.modal-btn.register-btn {
+  background: white;
+  color: #0056A4;
+  border: 2px solid #0056A4;
+}
+
+.auth-modal-btn.register-btn:hover,
+.modal-btn.register-btn:hover {
+  background: #0056A4;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.modal-footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.modal-footer p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.toggle-link {
+  color: #0056A4;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.toggle-link:hover {
+  color: #003d73;
+}
+
+@media (max-width: 768px) {
+  .auth-modal-content {
+    padding: 2rem;
+    width: 95%;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+

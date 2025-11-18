@@ -1,0 +1,299 @@
+/* src/components/Admin/StaffManagement.css */
+.staff-management {
+  padding: 2rem;
+}
+
+.management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.management-header h1 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+}
+
+.management-header p {
+  color: #718096;
+  margin: 0;
+}
+
+.create-staff-btn {
+  background: #48bb78;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.create-staff-btn:hover {
+  background: #38a169;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.staff-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 1rem;
+}
+
+.staff-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #667eea;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.staff-info {
+  flex: 1;
+}
+
+.staff-info h4 {
+  margin: 0 0 0.25rem 0;
+  color: #2d3748;
+}
+
+.staff-info p {
+  margin: 0 0 0.75rem 0;
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.staff-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.role-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.role-badge.administrator {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.role-badge.moderator {
+  background: #e9d8fd;
+  color: #44337a;
+}
+
+.role-badge.support {
+  background: #bee3f8;
+  color: #1a365d;
+}
+
+.department {
+  font-size: 0.75rem;
+  color: #718096;
+  background: #f7fafc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.staff-status {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status.active {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.status.inactive {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.last-login {
+  color: #a0aec0;
+}
+
+.staff-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.staff-actions button {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.edit-btn {
+  background: #ed8936;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #dd6b20;
+}
+
+.status-btn {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.status-btn.active {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.status-btn.inactive {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.delete-btn {
+  background: #e53e3e;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c53030;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #2d3748;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #718096;
+}
+
+.form-grid {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-actions {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.form-actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form-actions button[type="button"] {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.form-actions button[type="submit"] {
+  background: #667eea;
+  color: white;
+}

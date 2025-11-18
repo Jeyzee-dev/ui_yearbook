@@ -1,0 +1,425 @@
+/* src/components/Admin/UserManagement.css */
+.user-management {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.management-header {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.management-header h1 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+}
+
+.management-header p {
+  color: #718096;
+  margin: 0;
+}
+
+/* Controls Section */
+.management-controls {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.search-section {
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4299e1;
+}
+
+.filter-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-section select {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.875rem;
+  min-width: 150px;
+}
+
+.export-btn {
+  padding: 0.75rem 1.5rem;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: auto;
+}
+
+.export-btn:hover {
+  background: #38a169;
+}
+
+.export-btn:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Users Table */
+.users-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th {
+  background: #f7fafc;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #4a5568;
+  border-bottom: 2px solid #e2e8f0;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.users-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.users-table tr:hover {
+  background: #f7fafc;
+}
+
+.users-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* User Info Cell */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-avatar {
+  flex-shrink: 0;
+}
+
+.user-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #4299e1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.user-details strong {
+  color: #2d3748;
+  font-size: 0.875rem;
+}
+
+.user-details span {
+  color: #718096;
+  font-size: 0.75rem;
+}
+
+/* Contact and Academic Info */
+.contact-info,
+.academic-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.contact-info div:first-child {
+  font-weight: 500;
+}
+
+/* Employment Info */
+.employment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.employment-status {
+  padding: 0.375rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  width: fit-content;
+}
+
+.employment-status.employed {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.employment-status.unemployed {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.employment-status.self-employed {
+  background: #fef5e7;
+  color: #744210;
+}
+
+.employment-status.seeking {
+  background: #bee3f8;
+  color: #1a365d;
+}
+
+.company {
+  font-size: 0.75rem;
+  color: #718096;
+  font-style: italic;
+}
+
+/* Status Select */
+.status-select {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.status-select.active {
+  border-color: #48bb78;
+  background: #f0fff4;
+  color: #22543d;
+}
+
+.status-select.inactive {
+  border-color: #e53e3e;
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.status-select.suspended {
+  border-color: #ed8936;
+  background: #fef5e7;
+  color: #744210;
+}
+
+.status-select:focus {
+  outline: none;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.view-btn {
+  background: #4299e1;
+  color: white;
+}
+
+.view-btn:hover {
+  background: #3182ce;
+}
+
+.edit-btn {
+  background: #ed8936;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #dd6b20;
+}
+
+.message-btn {
+  background: #9f7aea;
+  color: white;
+}
+
+.message-btn:hover {
+  background: #805ad5;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #718096;
+}
+
+.no-results-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-results h3 {
+  color: #4a5568;
+  margin: 0 0 0.5rem 0;
+}
+
+.no-results p {
+  margin: 0;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.pagination-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e2e8f0;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.875rem;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  border-color: #4299e1;
+  background: #ebf8ff;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  color: #4a5568;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .users-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-section select {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .export-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-management {
+    padding: 1rem;
+  }
+  
+  .management-controls {
+    padding: 1rem;
+  }
+  
+  .users-table th,
+  .users-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .user-details {
+    gap: 0.125rem;
+  }
+}
